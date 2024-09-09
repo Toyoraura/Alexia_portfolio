@@ -1,0 +1,47 @@
+/* ==========================================================================
+   HEADINGS / ELEMENT
+   ========================================================================== */
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     font-family: var(--font-primary);
+//     line-height: 1;
+//     font-weight: bold;
+// }
+
+h1 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-h1);
+    margin-top: 0;
+    color: var(--color-accent);
+   }
+   
+   
+   h2 {
+   font-size: var(--font-size-h2);
+   font-family: var(--font-primary);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    font-family: var(--font-primary);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+
+
+
+p {
+   font-size: var(--font-size-p);
+   font-family: var(--font-secondary);
+}
+

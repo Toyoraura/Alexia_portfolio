@@ -1,0 +1,73 @@
+/* ==========================================================================
+   scrolly / component
+   ========================================================================== */
+
+.has-js {
+    [data-scrolly='fromBottom'] {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.4s $ease-out-expo;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='fromLeft'] {
+        opacity: 0;
+        transform: translateX(-60px);
+        transition: all 0.4s $ease-out-expo;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='fromTop'] {
+        opacity: 0;
+        transform: translateY(-60px);
+        transition: all 0.4s $ease-out-expo;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    //ajouter un overflow-x: hidden dans le body pour ne pas avoir de barre de défilement dans le bas
+    [data-scrolly='fromRight'] {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all 0.4s $ease-out-expo;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='zoomIn'] {
+        transform: scale(1);
+        transition: all 0.4s ease-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.is-active {
+            transform: scale(0.6);
+        }
+    }
+
+    [data-scrolly='flipFromBottom'] {
+        opacity: 0;
+        transform: rotateX(-100deg);
+        transition: all 0.4s $ease-out-expo;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotateX(0);
+        }
+    }
+}

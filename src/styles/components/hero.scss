@@ -1,0 +1,167 @@
+//hero page accueil
+.hero_accueil {
+    position: relative;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        height: 600px;
+        margin: 0 5%;
+        h1 {
+            margin-top: 100px;
+            margin-bottom: 0;
+            @media screen and (max-width: $breakpoint-sm) {
+                font-size: 48px;
+            }
+        }
+        p {
+            color: var(--color-secondary);
+            max-width: 40%;
+            @media screen and (max-width: $breakpoint-sm) {
+                font-size: 18px;
+            }
+        }
+        .btn {
+            font-family: var(--font-secondary);
+            background-color: var(--color-accent);
+            color: var(--color-tertiary);
+            width: fit-content;
+            padding: 10px 40px;
+        }
+        a {
+            font-variant-caps: all-small-caps;
+            font-size: var(--font-size-btn);
+            @media screen and (max-width: $breakpoint-sm) {
+                font-size: 20px;
+            }
+        }
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    }
+}
+
+//hero page modeles
+.hero_modeles {
+    color: var(--color-accent);
+    height: 750px;
+    @media screen and (max-width: $breakpoint-sm) {
+        height: 600px;
+    }
+    position: relative;
+    .content {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            padding: 50 0px;
+            @media screen and (max-width: 500px) {
+                font-size: 36px;
+            }
+            @media screen and (min-width: 501px) {
+                font-size: 48px;
+            }
+            @media screen and (min-width: $breakpoint-ml) {
+                font-size: var(--font-size-h1);
+            }
+        }
+        p {
+            font-size: var(--font-size-p);
+            color: var(--color-secondary);
+            @media screen and (max-width: $breakpoint-ml) {
+                font-size: 20px;
+            }
+            @media screen and (max-width: $breakpoint-sm) {
+                font-size: 12px;
+            }
+        }
+        a {
+            font-size: var(--font-size-a);
+            @media screen and (max-width: $breakpoint-sm) {
+                font-size: 20px;
+            }
+            font-variant-caps: all-small-caps;
+        }
+    }
+    .btn {
+        background-color: var(--color-accent);
+        color: var(--color-tertiary);
+        width: fit-content;
+        padding: 5px 45px;
+    }
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
+//single modele
+.hero_single-modele {
+    color: var(--color-accent);
+    height: 750px;
+    @media screen and (max-width: $breakpoint-sm) {
+        height: 650px;
+    }
+    position: relative;
+    .content {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            padding: 50 0px;
+            font-size: var(--font-size-h1);
+            @media screen and (max-width: $breakpoint-sm) {
+                font-size: 48px;
+            }
+        }
+        p {
+            font-size: var(--font-size-p);
+            color: var(--color-secondary);
+            @media screen and (max-width: $breakpoint-sm) {
+                font-size: 18px;
+            }
+        }
+        a {
+            font-size: var(--font-size-a);
+            font-variant-caps: all-small-caps;
+            width: 100%;
+            @media screen and (max-width: $breakpoint-sm) {
+                font-size: 20px;
+            }
+        }
+        .btn {
+            background-color: var(--color-accent);
+            color: var(--color-tertiary);
+            width: fit-content;
+            padding: 5px 45px;
+            cursor: pointer;
+        }
+    }
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
+
+// .hero_accueil {
+//     .single-modele {
+//         h1 {
+//             margin-top: 50px;
+//         }
+//     }
+// }
