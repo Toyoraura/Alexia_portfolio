@@ -1,59 +1,105 @@
-{% include '_partials/_header.html' %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Alexia Lepage</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script src="scripts/main.js" defer></script>
+  </head>
+
+  <body data-component="Scrolly">
+    <header
+      class="header"
+      data-component="Header"
+      data-scroll-limit="0.05"
+      data-auto-hide="true"
+    >
+      <div class="wrapper">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="assets/images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="nav__menu">
+            <li>
+              <a class="nav-primary__item" href="#">Accueil</a>
+            </li>
+            <li>
+              <a class="nav-primary__item" href="#">À propos</a>
+            </li>
+            <li>
+              <a class="nav-primary__item" href="#">Projet</a>
+            </li>
+            <li>
+              <a class="nav-primary__item" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="header__toggle js-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+  </body>
+</html>
+
+<!-- HERO SECTION -->
 
 <div class="hero">
     <div class="hero__content">
         <div class="hero__infos">
-            <h4>Salut,</h4>
-            <h1>Je suis Alexia Lepage</h1>
-            <h2>Designer UX/UI</h2>
-            <p>
-              Miaow then turn around and show you my bum. Meowwww. Eat the
-              rubberband tuxedo cats always looking dapper love blinks and purr purr
-              purr purr yawn so sniff sniff.
+            <h4 class="hero__title">Salut,</h4>
+            <h1 class="hero__name">Je suis Alexia Lepage</h1>
+            <h2 class="hero__job">Designer UX/UI</h2>
+            <p class="hero__text">
+              Miaow then turn around and show you my bum. Meowwww. Eat the
+              rubberband tuxedo cats always looking dapper love blinks and purr purr
+              purr purr yawn so sniff sniff.
             </p>
             <div class="hero__medias">
-              <ul>
-                <li>
-                  <a href="https://www.behance.net/alexialepage1">
-                    <img
-                      class="media-logo"
-                      src="assets/images/behance1.svg"
-                      alt="Logo Behance"
-                    />
-                  </a>
-                </li>
-                <li><a href="https://www.youtube.com/channel/UCMtGHhiGeJxNufn0dt0K16Q"></a>
-                    <img
-                      class="media-logo"
-                      src="assets/images/youtube1.svg"
-                      alt="Logo Youtube"
-                    />
-                  </a></li>
-                <li><a href="https://ca.linkedin.com/in/alexia-lepage-680a041b9"></a>
-                    <img
-                      class="media-logo"
-                      src="assets/images/linkedin1.svg"
-                      alt="Logo Linkedin"
-                    />
-                  </a></li>
-                <li><a href="#"></a>
-                    <img
-                      class="media-logo"
-                      src="assets/images/instagram1.svg"
-                      alt="Logo Instagram"
-                    />
-                  </a></li>
-              </ul>
+              <a href="https://www.behance.net/alexialepage1">
+                <svg class="icon icon--hero">
+                  <use xlink:href="#icon-behance1"></use>
+                </svg>
+              </a>
+              <a href="https://www.behance.net/alexialepage1">
+                <svg class="icon icon--youtube ">
+                  <use xlink:href="#icon-youtube1"></use>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/alexia-lepage-680a041b9?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=ca">
+                <svg class="icon icon--hero">
+                  <use xlink:href="#icon-linkedin1"></use>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/alexia-lepage-680a041b9?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=ca">
+                <svg class="icon icon--hero">
+                  <use xlink:href="#icon-instagram1"></use>
+                </svg>
+              </a>
             </div>
             <a href="#" class="hero__btn">À propos de moi</a>
           </div>
-          <div class="hero__portrait">
-            <img src="assets/images/photo1_hero.png" alt="Photo Alexia">
-          </div>
+        <div class="hero__portrait">
+          <img src="assets/images/photo1_hero.png" alt="Photo Alexia">
+        </div>
     </div>
   
-
-  <div class="scroll"><img src="" alt="Scrolling button"></div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+    
 </div>
 
-{% include '_partials/_footer.html' %}
+<footer>
+  <p>this is a footer</p>
+</footer>
+</body>
+</html>

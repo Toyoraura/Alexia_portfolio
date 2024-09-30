@@ -6,22 +6,148 @@
   height: 100vh;
   background-color: var(--color-primary);
   color: var(--color-white);
+  font-family: var(--font-primary);
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr auto;
     gap: 100px;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1200px;
     width: 100%;
+    margin: 0 auto; /* Center the content horizontally */
   }
 
-  ul {
-    list-style-type: none;
-    li {
-      .media-logo {
-        list-style-type: none;
+  &__infos {
+    max-width: 500px;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 50px; /* Adjust to make the line shorter or longer */
+      height: 2px; /* Adjust the thickness of the line */
+      background-color: #ffffff; /* Adjust to match your desired color */
+      margin-right: 10px; /* Space between the line and the text */
+      transition: width 1s ease-in-out; /* Animation timing */
+      animation: lineGrow 1s ease-in-out forwards;
+    }
+  }
+
+  @keyframes lineGrow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50px; /* Final width of the line */
+    }
+  }
+
+  &__name {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  &__job {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-top: 17px;
+  }
+
+  &__medias {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 35px;
+
+    .icon {
+      fill: var(--color-white);
+
+      &:hover {
+        fill: var(--color-tertiary);
       }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-weight: bold; /* Bold text */
+    font-size: var(--font-size-btn);
+    text-decoration: none;
+    padding: 20px 20px; /* Adjust padding to create space around the text */
+    border: 2px solid #ffffff; /* White border to make it stand out */
+    border-radius: 4px; /* Small rounded corners */
+    text-transform: uppercase; /* Uppercase letters */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+
+    &:hover {
+      transform: translateY(-3px); /* Slight upward movement on hover */
+      background-color: transparent;
+      border: 3px solid var(--color-white);
+      color: var(--color-white); /* Dark text color */
+    }
+  }
+
+  &__portrait {
+    img {
+      object-fit: cover;
+      justify-self: end; /* Keeps the image towards the right */
+    }
+  }
+
+  /* Container for the scroll indicator */
+  .scroll-indicator {
+    position: relative;
+    width: 30px; /* Width of the oval */
+    height: 60px; /* Height of the oval */
+    border: 2px solid #ffffff; /* Border to make the oval shape */
+    border-radius: 50px; /* Makes the container an oval */
+    margin: 0 auto; /* Center the element horizontally */
+    overflow: hidden; /* Hide the dot when it goes outside */
+  }
+
+  /* Dot inside the scroll indicator */
+  .scroll-dot {
+    position: absolute;
+    top: 10px; /* Initial position at the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px; /* Width of the dot */
+    height: 20px; /* Height of the dot */
+    background-color: #e0e0e0; /* Dot color */
+    border-radius: 50%; /* Makes the dot circular */
+    animation: scrollAnimation 3s ease-in-out infinite; /* Animation for the dot */
+  }
+
+  /* Keyframes for the scroll animation */
+  @keyframes scrollAnimation {
+    0% {
+      top: 10px;
+      opacity: 1; /* Fully visible at the top */
+    }
+    50% {
+      top: 30px;
+      opacity: 1; /* Still fully visible while moving to the bottom */
+    }
+    75% {
+      top: 30px;
+      opacity: 0; /* Start fading out at the bottom */
+    }
+    100% {
+      top: 10px;
+      opacity: 0; /* Fully faded out before restarting */
     }
   }
 }

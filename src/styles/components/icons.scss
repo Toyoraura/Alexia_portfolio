@@ -2,78 +2,87 @@
    icons / component
    ========================================================================== */
 
-[class^='icon'] {
-    fill: currentColor; // inherit color of its context
-    display: inline-block;
-    flex: 0 0 auto; // prevent icon shrink/grow if in a flex parent
-    height: 1em;
-    vertical-align: middle;
-    width: 1em;
-    stroke: transparent;
+[class^="icon"] {
+  fill: currentColor; // inherit color of its context
+  display: inline-block;
+  flex: 0 0 auto; // prevent icon shrink/grow if in a flex parent
+  height: 1em;
+  vertical-align: middle;
+  width: 1em;
+  stroke: transparent;
 }
 
 .icon--stroke {
-    fill: transparent;
-    stroke: white;
+  fill: transparent;
+  stroke: white;
 }
 
 .icon--xs {
-    height: 0.75em;
-    width: 0.75em;
+  height: 0.75em;
+  width: 0.75em;
 }
 
 .icon--sm {
-    height: 0.8em;
-    width: 0.8em;
+  height: 0.8em;
+  width: 0.8em;
 }
 
 .icon--md {
-    height: 1.25em;
-    width: 1.25em;
+  height: 1.25em;
+  width: 1.25em;
 }
 
 .icon--lg {
-    height: 1.75em;
-    width: 1.75em;
+  height: 1.75em;
+  width: 1.75em;
+}
+
+.icon--hero {
+  height: 2.7rem;
+  width: 2.7rem;
+}
+.icon--youtube {
+  height: 3.5rem;
+  width: 3.5rem;
 }
 
 .icon--sl {
-    height: 4em;
-    width: 4em;
+  height: 4em;
+  width: 4em;
 }
 
 .icon--xl {
-    height: 7em;
-    width: 7em;
+  height: 7em;
+  width: 7em;
 }
 
 .icon--arrow {
-    background-color: var(--color-secondary);
-    border-radius: 50%;
-    height: 4em;
-    width: 4em;
-    // height: 100%;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  height: 4em;
+  width: 4em;
+  // height: 100%;
 
-    padding: 10px;
+  padding: 10px;
 
-    use {
-        fill: white;
-        height: 50%;
-        width: 50%;
-    }
+  use {
+    fill: white;
+    height: 50%;
+    width: 50%;
+  }
 }
 
-.media_styles {
-    display: flex;
-    gap: 27px;
+.hero__medias {
+  display: flex;
+  gap: 15px;
 
-    .icon--facebook use {
-        fill: #3b5998;
-    }
-    .icon--twitter use {
-        fill: #1da1f2;
-    }
-    .icon--instagram use {
-        fill: #e1306c;
-    }
+  .icon--facebook use {
+    fill: #3b5998;
+  }
+  .icon--twitter use {
+    fill: #1da1f2;
+  }
+  .icon--instagram use {
+    fill: #e1306c;
+  }
 }
