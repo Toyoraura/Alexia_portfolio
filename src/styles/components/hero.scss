@@ -26,6 +26,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
 
     &::before {
       content: "";
@@ -56,10 +57,12 @@
 
   &__job {
     text-transform: uppercase;
+    font-weight: 400;
   }
 
   &__text {
     margin-top: 17px;
+    line-height: 25px;
   }
 
   &__medias {
@@ -86,22 +89,20 @@
     font-size: var(--font-size-btn);
     text-decoration: none;
     padding: 20px 20px; /* Adjust padding to create space around the text */
-    border: 2px solid #ffffff; /* White border to make it stand out */
     border-radius: 4px; /* Small rounded corners */
     text-transform: uppercase; /* Uppercase letters */
     cursor: pointer; /* Pointer cursor on hover */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
 
     &:hover {
       transform: translateY(-3px); /* Slight upward movement on hover */
-      background-color: transparent;
-      border: 3px solid var(--color-white);
+      background-color: var(--color-tertiary);
       color: var(--color-white); /* Dark text color */
     }
   }
 
   &__portrait {
     img {
+      height: 560px;
       object-fit: cover;
       justify-self: end; /* Keeps the image towards the right */
     }

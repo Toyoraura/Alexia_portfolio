@@ -1,8 +1,9 @@
-import Scrolly from './components/Scrolly';
-import Carousel from './components/Carousel';
-import Youtube from './components/Youtube';
-import Form from './components/Form';
-import Header from './components/Header';
+import Scrolly from "./components/Scrolly";
+import Carousel from "./components/Carousel";
+import Youtube from "./components/Youtube";
+import Form from "./components/Form";
+import Header from "./components/Header";
+import Skillbar from "./components/Skillbar";
 
 export default class ComponentFactory {
   constructor() {
@@ -12,12 +13,13 @@ export default class ComponentFactory {
       Header,
       Youtube,
       Form,
+      Skillbar,
     };
     this.init();
   }
 
   init() {
-    const components = document.querySelectorAll('[data-component]');
+    const components = document.querySelectorAll("[data-component]");
 
     for (let i = 0; i < components.length; i++) {
       const element = components[i];
