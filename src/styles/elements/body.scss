@@ -4,13 +4,13 @@
    Les éléments de la page vont hérités des propriétés inscrite dans body
    ========================================================================== */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: var(--color-bg-primary);
-    color: var(--color-black);
-    font-family: var(--font-secondary);
-    font-size: var(--font-size-content);
-    line-height: 1.6;
+  background: var(--color-bg-primary);
+  color: var(--color-black);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-content);
+  line-height: 1.6;
 }
