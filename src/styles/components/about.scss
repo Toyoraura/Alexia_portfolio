@@ -4,27 +4,47 @@
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    &__left {
-      &__presentation {
-        &__title {
-        }
-
-        &__text {
-        }
+  }
+  &__left {
+    &__presentation {
+      &__title {
       }
-    }
 
-    &__right {
-      &__used {
-        &__title {
-        }
-
-        &__logiciels {
-        }
+      &__text {
       }
     }
   }
+
+  &__right {
+    &__used {
+      &__title {
+      }
+
+      &__logiciels {
+      }
+    }
+  }
+}
+
+.about__interets {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about__title {
+  display: flex;
+  align-items: center;
+}
+
+.about__title svg {
+  margin-left: 10px; /* Adjust spacing as needed */
+}
+
+.about__images {
+  display: flex;
+  gap: 10px; /* Adjust spacing between images as needed */
+  margin-top: 10px; /* Adjust spacing from the title as needed */
 }
 
 .about__skills {
