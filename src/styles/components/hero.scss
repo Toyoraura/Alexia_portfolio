@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 85vh;
   background-color: var(--color-primary);
   color: var(--color-white);
   font-family: var(--font-primary);
@@ -89,7 +89,6 @@
     font-size: var(--font-size-btn);
     text-decoration: none;
     padding: 20px 20px; /* Adjust padding to create space around the text */
-    border-radius: 4px; /* Small rounded corners */
     text-transform: uppercase; /* Uppercase letters */
     cursor: pointer; /* Pointer cursor on hover */
 
