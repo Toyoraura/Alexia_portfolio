@@ -8,8 +8,13 @@
 
   &__arrow {
     .icon {
-      fill: var(--color-primary);
-      stroke: var(--color-white);
+      fill: var(--color-white);
+      stroke: var(--color-primary);
+
+      &:hover {
+        fill: var(--color-primary);
+        stroke: var(--color-white);
+      }
     }
   }
 
@@ -38,6 +43,11 @@
     .icon {
       fill: var(--color-primary);
       stroke: var(--color-primary);
+
+      &:hover {
+        fill: var(--color-white);
+        stroke: var(--color-tertiary);
+      }
     }
   }
 }
