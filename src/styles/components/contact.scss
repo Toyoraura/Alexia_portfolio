@@ -12,7 +12,6 @@
     gap: 200px;
     padding: 0 20px;
     font-family: var(--font-primary);
-    // max-width: 1200px;
     width: 100%;
     margin: 0 auto;
   }
@@ -152,9 +151,11 @@
     color: var(--color-white);
     text-decoration: none;
     transition: color 0.3s ease;
+    text-align: center;
+    font-size: 1.8rem;
 
     &:hover {
-      color: var(--color-secondary);
+      color: var(--color-tertiary);
     }
   }
 
