@@ -7,19 +7,19 @@ export default class Youtube {
   constructor(element) {
     this.element = element;
 
-    this.videoContainer = this.element.querySelector('.js-video');
-    this.poster = this.element.querySelector('.js-poster');
+    this.videoContainer = this.element.querySelector(".js-video");
+    this.poster = this.element.querySelector(".js-poster");
 
     this.videoId = this.element.dataset.videoId;
     this.autoplay = this.poster ? 1 : 0;
     this.playerReady = false;
 
     Youtube.instances.push(this);
-    console.log('allo');
+    console.log("allo");
     if (this.videoId) {
       Youtube.loadScript();
     } else {
-      console.error('Vous devez spécifier un id');
+      console.error("Vous devez spécifier un id");
     }
   }
 
@@ -27,19 +27,19 @@ export default class Youtube {
     if (!Youtube.scriptIsLoading) {
       Youtube.scriptIsLoading = true;
 
-      const script = document.createElement('script');
-      script.src = 'https://www.youtube.com/iframe_api';
+      const script = document.createElement("script");
+      script.src = "https://www.youtube.com/iframe_api";
       document.body.appendChild(script);
     }
   }
 
   init() {
-    document.documentElement.classList.add('is-video-ready');
+    document.documentElement.classList.add("is-video-ready");
 
     this.initPlayer = this.initPlayer.bind(this);
 
     if (this.poster) {
-      this.element.addEventListener('click', this.initPlayer);
+      this.element.addEventListener("click", this.initPlayer);
     } else {
       this.initPlayer();
     }
@@ -47,19 +47,22 @@ export default class Youtube {
 
   initPlayer(event) {
     if (event) {
-      this.element.removeEventListener('click', this.initPlayer);
+      this.element.removeEventListener("click", this.initPlayer);
+      if (this.poster) {
+        this.poster.style.display = "none";
+      }
     }
 
     this.player = new YT.Player(this.videoContainer, {
-      height: '100%',
-      width: '100%',
+      height: "100%",
+      width: "100%",
       videoId: this.videoId,
       playerVars: { rel: 0, autoplay: this.autoplay },
       events: {
         onReady: () => {
           this.playerReady = true;
           const observer = new IntersectionObserver(this.watch.bind(this), {
-            rootMargin: '0px 0px 0px 0px',
+            rootMargin: "0px 0px 0px 0px",
           });
           observer.observe(this.element);
         },
@@ -83,7 +86,7 @@ export default class Youtube {
   }
 
   static initAll() {
-    document.documentElement.classList.add('is-video-ready');
+    document.documentElement.classList.add("is-video-ready");
 
     for (let i = 0; i < Youtube.instances.length; i++) {
       const instance = Youtube.instances[i];

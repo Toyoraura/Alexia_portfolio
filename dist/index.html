@@ -50,7 +50,7 @@
 <!-- HERO SECTION -->
 
 <section class="hero">
-    <div class="hero__content">
+    <div class="hero__content" data-scrolly='fromLeft'>
         <div class="hero__infos">
             <h4 class="hero__title">Salut,</h4>
             <h1 class="hero__name">Je suis Alexia Lepage</h1>
@@ -82,18 +82,18 @@
                     </svg>
                 </a>
             </div>
-            <a href="#" class="hero__btn">À propos de moi</a>
+            <a href="#" class="btn__projet">À propos de moi</a>
         </div>
-        <div class="hero__portrait">
+        <div class="hero__portrait" data-scrolly='fromRight'>
             <img src="assets/images/photo1_hero.png" alt="Photo Alexia">
         </div>
     </div>
 
-    <div class="scroll-indicator">
-        <a href="#about">
+    <a href="#about">
+        <div class="scroll-indicator">
             <div class="scroll-dot"></div>
-        </a>
-    </div>
+        </div>
+    </a>
 </section>
 
 <!-- ABOUT -->
@@ -263,6 +263,53 @@
     </div>
 </section>
 
+<section class="contact">
+    <div class="wrapper">
+        <div class="contact__left">
+            <div class="video" data-component="Youtube" data-video-id="dQw4w9WgXcQ">
+                <div class="video__media js-video">
+                    <img class="js-poster" src="assets/images/photo1_hero.png" alt="Présentation vidéo" />
+                </div>
+                <svg class="icon icon-play icon--stroke icon--xl">
+                    <use xlink:href="#icon-play"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="contact__right">
+            <h1>Contact</h1>
+            <div class="contact__form">
+                <form action="send_email.php" method="POST" class="form" autocomplete="off" data-component="Form">
+                    <fieldset class="grid">
+                        <div class="input">
+                            <label class="input__label" for="fullname">Bob</label>
+                            <input class="input__element" type="text" name="fullname" id="fullname" placeholder="Votre nom*" required>
+                        </div>
+                        <div class="input">
+                            <label class="input__label" for="email">Votre email*</label>
+                            <input class="input__element" type="email" name="email" id="email" placeholder="Votre email*" required>
+                        </div>
+                        <div class="input">
+                            <label class="input__label" for="subject">Objet*</label>
+                            <input class="input__element" type="text" name="subject" id="subject" placeholder="Objet*" required>
+                        </div>
+                        <div class="input textarea u-grid-fullwidth">
+                            <label class="input__label" for="comment">Votre message*</label>
+                            <textarea class="input__element" name="comment" id="comment" placeholder="Votre message*" required></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="btns__contact">
+                        <button type="submit" class="btn__form btn-footer">Envoyer</button>
+                        <a href="" class="btn__form ">Télécharger CV</a>
+                    </div>
+            </div>
+
+            </form>
+            <a href="mailto:ALEXIA.LEPAGE@HOTMAIL.COM" class="contact__mail">ALEXIA.LEPAGE@HOTMAIL.COM</a>
+        </div>
+    </div>
+    </div>
+</section>
 
 <footer>
     <p>this is a footer</p>
