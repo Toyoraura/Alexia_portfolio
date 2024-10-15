@@ -3,7 +3,7 @@ import Carousel from "./components/Carousel";
 import Youtube from "./components/Youtube";
 import Form from "./components/Form";
 import Header from "./components/Header";
-import Skillbar from "./components/Skillbar";
+import SkillAnimation from "./components/Skillbar";
 
 export default class ComponentFactory {
   constructor() {
@@ -13,7 +13,7 @@ export default class ComponentFactory {
       Header,
       Youtube,
       Form,
-      Skillbar,
+      SkillAnimation,
     };
     this.init();
   }
