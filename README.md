@@ -1,2 +1,4 @@
 # Alexia_portfolio
- Portfolio Alexia Lepage
+ Portfolio professionnel pour Alexia Lepage.
+
+NPM start suivi de NPM install
